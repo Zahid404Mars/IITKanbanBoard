@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add a link to FontAwesome CSS if you plan to use icons -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> -->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, blue,yellow);
+            margin: 0;
+            padding: 0;
+
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        header:hover {
+            background: linear-gradient(135deg, #ff0080, #ff8a00);
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 95px;
+        }
+
+        form {
+            background-color: darkkhaki;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px; /* Increased border radius for a rounded look */
+            font-size: 18px; /* Increased font size for better readability */
+            background-color: transparent; /* Set input background color to transparent */
+            color: #333; /* Dark text color */
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF; /* Change border color on focus */
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle box shadow on focus */
+        }
+
+        button {
+            background-color: #006400; /* Dark green button color */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #800000; /* Maroon button color on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        footer:hover {
+            background: linear-gradient(135deg, #ff0080, #ff8a00);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Join Form</h1>
+    </header>
+    <main>
+        <form id="join-form" action="Join_Check.php" method="post">
+            <div class="form-group">
+                <label for="reference-email">Reference Email</label>
+                <input type="email" id="reference-email" name="reference-email" required>
+            </div>
+            <div class="form-group">
+                <label for="invited-email">Invited Email(The email you got notification)</label>
+                <input type="email" id="invited-email" name="invited-email" required>
+            </div>
+            <div class="form-group">
+                <label for="reference-code">Reference Code</label>
+                <input type="text" id="reference-code" name="reference-code" required>
+            </div>
+            <button type="submit">Join</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2023 JoinUs IIT Kanban Board</p>
+    </footer>
+</body>
+</html>

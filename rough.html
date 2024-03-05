@@ -1,0 +1,50 @@
+<html>
+<head>
+  <style>
+    body {
+      background: linear-gradient(to right, blue, green);
+    }
+    h1 {
+      text-align: center;
+      color: black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin: 10px;
+    }
+    .button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+    .sign-in {
+      background-color: blue;
+    }
+    .sign-up {
+      background-color: green;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="buttons">
+    <button onclick="page3()" class="button sign-in">Sign In</button>
+    <button  onclick="page2()" class="button sign-up">Sign Up</button>
+  </div>
+
+  <h1>Welcome to IIT Kanban Board!</h1>
+
+  <!--<script>
+      function page2(){
+        window.location.href="page2.html";
+      }
+      function page3(){
+        window.location.href="page3.html";
+      }
+  </script>  -->
+</body>
+</html>

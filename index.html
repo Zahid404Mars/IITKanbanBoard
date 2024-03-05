@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KanBan Board</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        /* background: linear-gradient(to right, blue, green); */
+        background-image: url("assets/img/nstuImage.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+        opacity: 0.9;
+      }
+
+      h1 {
+        text-align: center;
+        color: lavenderblush;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 70px;
+        margin-top: 10vh; 
+        margin-left: 750px;
+
+
+      }
+
+      header {
+        color: #fff;
+        padding: .5rem 0;
+        text-align: center;
+        background: linear-gradient(
+          to right,
+          maroon,
+          orange
+        ); 
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: flex-end;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+      }
+
+      .signup-btn,
+      .login-btn {
+        background-color: green;
+        color: yellow;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .signup-btn:hover,
+      .login-btn:hover {
+        background-color: maroon;
+      }
+
+      main {
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
+        color:white;
+        padding: .1rem 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to right, orange, maroon);
+    
+      }
+
+      footer p {
+        font-size: 20px; /* Increase font size */
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 24px; /* Adjust font size for smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="buttons">
+          <a href="2ndSignUp.php" id="signBtn" class="signup-btn">Sign Up</a>
+          <a href="3rdLogin.php" id="loginBtn" class="login-btn">Sign In</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="r1">
+        <h1 id="typewriter" class="logo"></h1>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 IIT Kanban Board</p>
+    </footer>
+
+
+    <script>
+        const text = "IIT Kanban Board!";
+        const speed = 100;
+
+        let index = 0;
+        const typewriter = document.getElementById("typewriter");
+
+        function type() {
+            if (index < text.length) {
+                typewriter.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, speed);
+            }
+        }
+
+        window.onload = type();
+    </script>
+  </body>
+</html>
